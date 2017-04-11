@@ -23,18 +23,22 @@ public class AmazingNumber {
 		}
 
 		int maxcount = 0;
+		int currcount = 0;
 		int currStartIndex = 0;
 
 		for (int i = 0; i < iarr.length; i++) {
 			
 			if (iarr[i] <= 0) {
-				maxcount++;
+				currcount++;
 				if(isFirstAmazing){
 					firstAmazingCount++;
 				}
 			} else {
 				currStartIndex = i + 1;
-				maxcount=0;
+				if(currcount > maxcount){
+					maxcount = currcount;
+				}
+				currcount=0;
 				isFirstAmazing = false;
 			}
 		}
