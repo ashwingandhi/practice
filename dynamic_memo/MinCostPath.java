@@ -1,3 +1,8 @@
+/**
+* This program calculates the path from top left corner to bottom right corner
+* 
+**/
+
 package dynamic_memo;
 import java.util.ArrayList;
 import java.util.List;
